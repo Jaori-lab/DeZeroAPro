@@ -53,6 +53,26 @@ public class Main {
 		System.out.println("\n v1 = "+v1.getNomVille()+" ville de "+v1.getNbreHabitants()+" habitants se situant dans le pays de "+v1.getNomPays()+" fait partie de la catégorie: "+v1.getCategorieNbH());
 		System.out.println("\n v2 = "+v2.getNomVille()+" ville de "+v2.getNbreHabitants()+" habitants se situant dans le pays de "+v2.getNomPays()+" fait partie de la catégorie: "+v2.getCategorieNbH());
 		System.out.println("\n v3 = "+v3.getNomVille()+" ville de "+v3.getNbreHabitants()+" habitants se situant dans le pays de "+v3.getNomPays()+" fait partie de la catégorie: "+v3.getCategorieNbH());
+		
+		// Utilisation de la méthode comparer()
+		
+		//Ville v5 = new Ville("Lyon", 654, "France");
+		// Ville v9 = new Ville("Marseille", 765, "France");
+		
+		System.out.println("\n \t Comparaisons : \n");
+		
+		System.out.println(v1.comparer(v2));  
+		
+		// Nbre d'instance - variable de Classe
+		
+		Ville v9 = new Ville();
+		System.out.println(Ville.nbreInstances);
+		System.out.println(Ville.getNbreInstancesBis());
+		
+		// Héritage de classe
+		
+		Capitale c = new Capitale();
+		System.out.println(c.decrisToi());
 	}
 
 }
