@@ -18,11 +18,30 @@ public class Capitale extends Ville{
 		monument = "aucun" ;
 	}
 	
-	// Page 104
+	// Constructeur de Capitale
+	public Capitale(String nom, int hab, String pays, String monument) {
+		super(nom,hab,pays);
+		this.monument = monument;
+	}
 	
 	public String decrisToi() {
 		String str = super.decrisToi()+ "\t Ajout de l'attribut monument : "+this.monument;
 		System.out.println("Invocation de super.decrisToi()");
 		return str;
 	}
+
+	/**
+	 * @return le monument
+	 */
+	public String getMonument() {
+		return monument;
+	}
+
+	/**
+	 * @param monument le monument à définir
+	 */
+	public void setMonument(String monument) {
+		this.monument = monument;
+	}
+	
 }

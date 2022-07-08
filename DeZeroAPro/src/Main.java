@@ -73,6 +73,10 @@ public class Main {
 		
 		Capitale c = new Capitale();
 		System.out.println(c.decrisToi());
+		
+		
+		Capitale cap = new Capitale("Paris",6789567,"France", "Tour Effeil");
+				System.out.println("Appel de la méthode décris-toi de la classe Capitale "+ cap.decrisToi());
 	}
 
 }
