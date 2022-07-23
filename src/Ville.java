@@ -1,4 +1,3 @@
-import java.util.Objects;  // a été imorté au moment de la création des méthodes hashCode() et equals()
 
 public class Ville {
 	
@@ -37,17 +36,14 @@ public class Ville {
 	
 	// Constructeur avec paramètres (Surcharge de constructeur)
 	
-	public Ville(String Nom, int nbre, String Pays) throws NombreHabitantException {
-		if (nbre < 0) {
-			throw new NombreHabitantException();
-		}else {
+	public Ville(String Nom, int nbre, String Pays) {
 		//System.out.println("Création d'une ville avec paramètres !");
 		nomVille = Nom;
 		nbreHabitants = nbre;
 		nomPays = Pays;
 		this.setCategorieNbH();
 		nbreInstances++;
-		nbreInstancesBis++;}
+		nbreInstancesBis++;
 	}
 	
 	/** =======================================================================================================================================================================*/
@@ -147,31 +143,5 @@ public class Ville {
 	
 	public static int getNbreInstancesBis() {
 		return nbreInstancesBis;
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(categorieNbH, nbreHabitants, nomPays, nomVille);
-	}
-		// TODO mieux comprendre l'utilisation de la surcharge de toString , equals , et hashCode
-	
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Ville other = (Ville) obj;
-		return categorieNbH == other.categorieNbH && nbreHabitants == other.nbreHabitants
-				&& Objects.equals(nomPays, other.nomPays) && Objects.equals(nomVille, other.nomVille);
-	}
-	
-	/**====================================================================================================================*/
-	
-	public final int maMethode() {
-		
-		// le type de méthode "final" empèche sa modification
 	}
 }
